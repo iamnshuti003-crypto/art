@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TaskFlow | KanBan Task Manager</title>
+
+<link rel="stylesheet" href="i.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Congratulations -->
+<div class="congrats" id="congrats">
+🎉 Congratulations! All Tasks Completed 🚀
+</div>
+
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/906/906334.png">
+TaskFlow
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#dashboard">Dashboard</a></li>
+<li><a href="#tasks">My Tasks</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<button class="login-btn" onclick="openModal()">Login</button>
+
+</nav>
+
+<!-- Home -->
+
+<section class="hero" id="home">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600" class="float-img img1">
+
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600" class="float-img img2">
+
+<div class="hero-content">
+
+<h1>Manage Your <span>Tasks</span> Like A Pro</h1>
+
+<p>
+TaskFlow helps students, teams, and creators organize projects
+with beautiful KanBan boards and drag-and-drop management.
+</p>
+
+<button onclick="document.getElementById('tasks').scrollIntoView()">
+Start Managing
+</button>
+
+</div>
+
+</section>
+
+<!-- Dashboard -->
+
+<section id="dashboard">
+
+<div class="section-title">
+<h2>Dashboard</h2>
+</div>
+
+<div class="dashboard-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800">
+<h3>📋 Completed Tasks</h3>
+<p>24 tasks completed successfully this week.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800">
+<h3>⚡ Team Collaboration</h3>
+<p>Work together with your team efficiently.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800">
+<h3>🚀 Smart Planning</h3>
+<p>Organize schedules and priorities easily.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Tasks -->
+
+<section id="tasks">
+
+<div class="section-title">
+<h2>My Tasks</h2>
+</div>
+
+<div class="add-task">
+<input type="text" id="taskInput" placeholder="Enter task...">
+<button onclick="addTask()">Add Task</button>
+</div>
+
+<div class="board">
+
+<div class="column" id="todo">
+<h3>📝 To Do</h3>
+
+<div class="task" draggable="true">Design Homepage</div>
+<div class="task" draggable="true">Study JavaScript</div>
+
+</div>
+
+<div class="column" id="progress">
+<h3>⚡ In Progress</h3>
+
+<div class="task" draggable="true">Create KanBan Board</div>
+
+</div>
+
+<div class="column" id="done">
+<h3>✅ Done</h3>
+
+<div class="task" draggable="true">Create Navigation</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>About Us</h2>
+</div>
+
+<div class="about-box">
+
+<p>
+TaskFlow helps students and communities stay productive through
+modern task management tools.
+</p>
+
+<br>
+
+<p>
+We help people organize their goals, reduce stress,
+and improve teamwork in society.
+</p>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Email</h3>
+<p>taskflow@gmail.com</p>
+</div>
+
+<div class="contact-card">
+<h3>Phone</h3>
+<p>+250 788 000 000</p>
+</div>
+
+<div class="contact-card">
+<h3>Location</h3>
+<p>Kigali, Rwanda</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Login Modal -->
+
+<div class="modal" id="loginModal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h2>Login</h2>
+
+<input type="email" placeholder="Enter Email">
+<input type="password" placeholder="Enter Password">
+
+<button>Login</button>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 TaskFlow | Smart Productivity Platform
+</footer>
+
+<script src="i.js"></script>
+
+</body>
+</html>
